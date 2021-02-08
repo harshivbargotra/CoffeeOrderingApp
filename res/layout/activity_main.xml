@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coffee"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-black"
+            android:hint="Add Your Name"
+            android:inputType="textCapWords"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/teal_200"
+            android:text="TOPPINGS"/>
+
+        <CheckBox
+            android:id="@+id/notify_me_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+            android:buttonTint="@color/teal_200"
+            android:paddingLeft="24dp"
+            android:text="Whipped cream"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/notify_me_checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+            android:buttonTint="@color/teal_200"
+            android:paddingLeft="24dp"
+            android:text="Chocolate"
+            android:textSize="16sp" />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/teal_200"
+            android:layout_marginTop="16dp"
+            android:text="QUANTITY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:onClick="decrement"
+                android:background="@color/teal_700"
+                android:textColor="@color/white"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:onClick="increment"
+                android:text="+"
+                android:background="@color/teal_700"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="submitOrder"
+            android:text="Order"
+            android:background="@color/teal_700"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</ScrollView>
